@@ -43,4 +43,19 @@ The **StartupBoosters** platform uses the following technologies:
 To install the dependencies for the project, run the following command:
 
 ```bash
-yarn install
+npm install
+
+Scripts
+Here are the commands you can use to manage and run various parts of the platform:
+
+Backend API Server:
+npm run dev:backend: Navigate to the backend directory, install dependencies, and start the development server.
+npm run build:backend: Build the backend API server for production.
+npm run test:backend: Run tests for the backend API server.
+npm run lint:backend: Lint the backend code.
+Frontend Web Application:
+npm run dev:frontend: Navigate to the frontend directory and run the app using React.
+npm run build:frontend: Build the frontend web application for production.
+Deployment:
+npm run deploy:frontend: Deploy the frontend application to production using Vercel.
+npm run deploy:backend: Deploy the backend API server to production.
