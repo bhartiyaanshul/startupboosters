@@ -44,21 +44,35 @@ To install the dependencies for the project, run the following command:
 
 ```bash
 npm install
+```
 
 Scripts
 Here are the commands you can use to manage and run various parts of the platform:
 
 Backend API Server:
+```bash
 npm run dev:backend: Navigate to the backend directory, install dependencies, and start the development server.
+```
+```bash
 npm run build:backend: Build the backend API server for production.
+```
+```bash
 npm run test:backend: Run tests for the backend API server.
+```
+```bash
 npm run lint:backend: Lint the backend code.
+```
+
 Frontend Web Application:
+```bash
 npm run dev:frontend: Navigate to the frontend directory and run the app using React.
+```
+```bash
 npm run build:frontend: Build the frontend web application for production.
+```
 
 
-Usage
+## Usage
 To start using the tools and libraries in this repository, follow these steps:
 
 Clone the repository:
@@ -69,28 +83,12 @@ git clone https://github.com/bhartiyaanshul/startupboosters.git
 cd startupboosters
 Install the dependencies:
 
-bash
+```bash
 Copy code
 npm install
-Run the backend:
+```
 
-bash
-Copy code
-npm run dev:backend
-Run the frontend:
-
-bash
-Copy code
-npm run dev:frontend
-Log in to the admin panel:
-
-bash
-Copy code
-npm run dev:admin
-Set up payment integration (optional):
-
-
-Contributing
+## Contributing
 We welcome contributions! Please follow the steps below to contribute:
 
 Fork the repository.
@@ -99,5 +97,5 @@ Make your changes and commit them (git commit -am 'Add new feature').
 Push to your forked repository (git push origin feature-name).
 Create a new pull request.
 
-Live Link
+## Live Link
 Check out the live application at Live Link.
