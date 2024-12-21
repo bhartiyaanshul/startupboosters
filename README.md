@@ -56,6 +56,48 @@ npm run lint:backend: Lint the backend code.
 Frontend Web Application:
 npm run dev:frontend: Navigate to the frontend directory and run the app using React.
 npm run build:frontend: Build the frontend web application for production.
-Deployment:
-npm run deploy:frontend: Deploy the frontend application to production using Vercel.
-npm run deploy:backend: Deploy the backend API server to production.
+
+
+Usage
+To start using the tools and libraries in this repository, follow these steps:
+
+Clone the repository:
+
+bash
+Copy code
+git clone https://github.com/bhartiyaanshul/startupboosters.git
+cd startupboosters
+Install the dependencies:
+
+bash
+Copy code
+npm install
+Run the backend:
+
+bash
+Copy code
+npm run dev:backend
+Run the frontend:
+
+bash
+Copy code
+npm run dev:frontend
+Log in to the admin panel:
+
+bash
+Copy code
+npm run dev:admin
+Set up payment integration (optional):
+
+
+Contributing
+We welcome contributions! Please follow the steps below to contribute:
+
+Fork the repository.
+Create a new branch (git checkout -b feature-name).
+Make your changes and commit them (git commit -am 'Add new feature').
+Push to your forked repository (git push origin feature-name).
+Create a new pull request.
+
+Live Link
+Check out the live application at Live Link.
