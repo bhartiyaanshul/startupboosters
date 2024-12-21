@@ -1,7 +1,5 @@
 # StartupBoosters
 
-![StartupBoosters Logo](path/to/logo.png)
-
 Welcome to the **StartupBoosters** repository! This project aims to create a crowdfunding platform where **Founders** can raise capital for their startups, and **Investors** can discover and invest in these early-stage ventures.
 
 ## Table of Contents
@@ -12,9 +10,7 @@ Welcome to the **StartupBoosters** repository! This project aims to create a cro
 - [Scripts](#scripts)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 - [Live Link](#live-link)
-- [Demo Video](#demo-video)
 
 ## Introduction
 **StartupBoosters** is a crowdfunding platform that connects **Founders** and **Investors**. It enables **Founders** to list their startups and raise funds, while **Investors** can browse investment opportunities, fund startups, and track their investments. This platform supports both **accredited** and **non-accredited investors**, making it a scalable solution for startup fundraising.
@@ -84,7 +80,6 @@ cd startupboosters
 Install the dependencies:
 
 ```bash
-Copy code
 npm install
 ```
 
