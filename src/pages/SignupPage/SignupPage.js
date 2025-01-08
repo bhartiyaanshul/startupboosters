@@ -4,7 +4,7 @@ import { createClient } from '@supabase/supabase-js'
 import { useState } from 'react'
 import './SignupPage.css'
 
-const supabase = createClient(process.env.REACT_APP_SUPABASE_URL, process.env.REACT_APP_SUPABASE_ANON_KEY)
+// const supabase = createClient(process.env.REACT_APP_SUPABASE_URL, process.env.REACT_APP_SUPABASE_ANON_KEY)
 
 export const SignupPage = () => {
     const [email, setEmail] = useState('')
@@ -24,17 +24,17 @@ export const SignupPage = () => {
     }
     async function handleSignUp() {
 
-        if(password === confirmPassword){
-            const { data, error } = await supabase.auth.signUp({
-                email: email,
-                password: password,
-            })
-            console.log(data,error)
-            alert("Verification mail has been send and then login")
-        }
-        else{
-            alert("Password & Confirm Password didn't match")
-        }
+        // if(password === confirmPassword){
+        //     const { data, error } = await supabase.auth.signUp({
+        //         email: email,
+        //         password: password,
+        //     })
+        //     console.log(data,error)
+        //     alert("Verification mail has been send and then login")
+        // }
+        // else{
+        //     alert("Password & Confirm Password didn't match")
+        // }
     }
   return (
     <div>

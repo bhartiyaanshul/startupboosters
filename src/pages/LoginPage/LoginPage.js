@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { createClient } from '@supabase/supabase-js'
 import './LoginPage.css'
 
-const supabase = createClient(process.env.REACT_APP_SUPABASE_URL, process.env.REACT_APP_SUPABASE_ANON_KEY)
+// const supabase = createClient(process.env.REACT_APP_SUPABASE_URL, process.env.REACT_APP_SUPABASE_ANON_KEY)
 
 export const LoginPage = () => {
     const navigate = useNavigate()
@@ -16,18 +16,18 @@ export const LoginPage = () => {
     const handlePassword = (e) => setPassword(e.target.value)
 
     async function handleLogin() {
-        const { data, error } = await supabase.auth.signInWithPassword({
-            email: email,
-            password: password,
-        })
-        console.log(error)
+        // const { data, error } = await supabase.auth.signInWithPassword({
+        //     email: email,
+        //     password: password,
+        // })
+        // console.log(error)
 
-        if (!data.user) {
-            alert('Invalid login credentials')
-        }
-        else {
-            navigate("/")
-        }
+        // if (!data.user) {
+        //     alert('Invalid login credentials')
+        // }
+        // else {
+        //     navigate("/")
+        // }
     }
   return (
     <div className='login-page'>
