@@ -7,13 +7,11 @@ import { Navbar } from './components/Navbar/Navbar'
 
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/login' element={<LoginPage />} />
-        <Route path='/signup' element={<SignupPage />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path='/' element={<HomePage />} />
+      <Route path='/login' element={<LoginPage />} />
+      <Route path='/signup' element={<SignupPage />} />
+    </Routes>
   );
 }
 
