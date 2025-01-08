@@ -6,11 +6,14 @@ import HomePage from './pages/HomePage/HomePage';
 
 function App() {
   return (
-    <Routes>
-      <Route path='/' element={<HomePage />} />
-      <Route path='/login' element={<LoginPage />} />
-      <Route path='/signup' element={<SignupPage />} />
-    </Routes>
+    <div>
+      aneifwbajkfenqwnef
+    </div>
+    // <Routes>
+    //   <Route path='/' element={<HomePage />} />
+    //   <Route path='/login' element={<LoginPage />} />
+    //   <Route path='/signup' element={<SignupPage />} />
+    // </Routes>
   );
 }
 
