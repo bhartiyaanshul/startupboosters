@@ -1,0 +1,56 @@
+.explore-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 0;
+    gap: 140px;
+    color: #16263D;
+}
+
+.explore-startups{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.explore-heading{
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 50px;
+}
+
+.explore-sub-heading{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.explore-investors{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    position: relative;
+}
+
+.button{
+    max-width: 200px;
+    padding: 12px 90px;
+    color: #FFFFFF;
+    background-color: #16263D;
+    border-radius: 8px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.why-invest-image{
+    width: 100%;
+}

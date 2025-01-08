@@ -1,0 +1,57 @@
+.Navbar{
+    height: 80px;
+    background-color: white;
+    padding: 15px 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.company-name{
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 41.15px;
+    color: #16263D;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar-content{
+    display: flex;
+    gap: 100px;
+}
+
+.navbar-pages{
+    color: #16263D;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.search-section{
+    display: flex;
+    gap: 10px;
+    padding: 20px 150px 20px 20px;
+    border-radius: 100px;
+    color: #707070;
+    border: 1px solid #CCCCCC;
+    align-content: center;    
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.register-button{
+    padding: 20px 50px;
+    background-color: #16263D;
+    border-radius: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    cursor: pointer;
+}
