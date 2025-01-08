@@ -9,13 +9,12 @@ import Explore from '../../components/Explore/Explore'
 const HomePage = () => {
   return (
     <div>
-      {/* <Navbar />
+      <Navbar />
       <IntroSection />
       <Explore />
       <Accordion />
       <LetsStartSection />
-      <Footer /> */}
-      this is dngqenwfjqwef
+      <Footer />
     </div>
   )
 }
