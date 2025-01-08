@@ -8,13 +8,14 @@ import Explore from '../../components/Explore/Explore'
 
 const HomePage = () => {
   return (
-    <div className='landing-page'>
-      <Navbar />
+    <div>
+      {/* <Navbar />
       <IntroSection />
       <Explore />
       <Accordion />
       <LetsStartSection />
-      <Footer />
+      <Footer /> */}
+      this is dngqenwfjqwef
     </div>
   )
 }
