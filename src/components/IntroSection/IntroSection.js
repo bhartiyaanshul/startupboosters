@@ -22,10 +22,7 @@ export const IntroSection = () => {
                         <div className='intro-section-subtext'>Get equity and front row seats to the startups  <br />
                         and small businesses you love—⁠for as little as $100.
                         </div>
-                        <div className='enter-email-section'>
-                            <input className='enter-email-input' placeholder='Your Email Address'></input>
-                            <div className='register-button'>Invest</div>
-                        </div>
+                        <div className='button'>Explore</div>
                     </div>
                     <img className='intro-image' src={landingimage} alt='' />
                 </div>
