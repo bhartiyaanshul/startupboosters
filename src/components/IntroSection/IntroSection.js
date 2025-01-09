@@ -1,5 +1,5 @@
 import React from 'react'
-import landingimage from './image.png'
+import landingimage from './image.svg'
 import './IntroSection.css'
 import partner1 from './partnerimages/stripe-seeklogo.com.svg'
 import partner2 from './partnerimages/Component 49.svg'
