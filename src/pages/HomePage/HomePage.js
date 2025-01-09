@@ -1,15 +1,14 @@
 import React from 'react'
-import { Navbar } from '../../components/Navbar/Navbar'
-import { IntroSection } from '../../components/IntroSection/IntroSection'
-import Accordion from '../../components/Accordion/Accordion'
-import { LetsStartSection } from '../../components/LetsStartSection/LetsStartSection'
-import { Footer } from '../../components/Footer/Footer'
-import Explore from '../../components/Explore/Explore'
+import { Navbar } from '../../components/HomePage/Navbar/Navbar'
+import { IntroSection } from '../../components/HomePage/IntroSection/IntroSection'
+import Accordion from '../../components/HomePage/Accordion/Accordion'
+import { LetsStartSection } from '../../components/HomePage/LetsStartSection/LetsStartSection'
+import { Footer } from '../../components/HomePage/Footer/Footer'
+import Explore from '../../components/HomePage/Explore/Explore'
 
 const HomePage = () => {
   return (
     <div>
-      <Navbar />
       <IntroSection />
       <Explore />
       <Accordion />
