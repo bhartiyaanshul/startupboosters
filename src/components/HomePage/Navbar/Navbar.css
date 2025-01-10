@@ -1,10 +1,14 @@
 .Navbar{
-    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: white;
-    padding: 15px 150px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid #EEEEEE;
 }
 .company-name{
     font-size: 34px;
@@ -17,6 +21,7 @@
 
 .navbar-content{
     display: flex;
+    /* justify-content: space-between; */
     gap: 100px;
 }
 

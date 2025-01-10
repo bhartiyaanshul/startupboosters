@@ -13,7 +13,6 @@ const HomePage = () => {
       <Explore />
       <Accordion />
       <LetsStartSection />
-      <Footer />
     </div>
   )
 }

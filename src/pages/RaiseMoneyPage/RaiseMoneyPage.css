@@ -1,10 +1,19 @@
+.raise-money-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 100px; */
+}
+
 .introsection{
-    padding: 30px 150px;
+    padding: 150px;
     display: flex;
     flex-direction: column;
     margin-top: 100px;
     justify-content: center;
     color: #16263D;
+    margin-bottom: 100px;
 }
 
 .intro-section-content{
@@ -78,34 +87,10 @@
     font-size: 16px;
 }
 
-.intro-section-divider{
-    height: 160px;
-    display: flex;
-    gap: 100px;
-    justify-content: center;
-    background-color: #F0F8FF;
-    margin-top: 60px;
-    align-items: center;
+.founder-friendly-img{
+    width: 100%;
 }
 
-.divider-img:nth-child(1){
-    height: 45px;
-}
-.divider-img:nth-child(2){
-    height: 43px;
-}
-.divider-img:nth-child(3){
-    height: 24px;
-}
-.divider-img:nth-child(4){
-    height: 28px;
-}
-.divider-img:nth-child(5){
-    height: 48px;
-}
-.divider-img:nth-child(6){
-    height: 45px;
-}
-.divider-img:nth-child(7){
-    height: 45px;
+.built-by-founders-img{
+    width: 100%;
 }
