@@ -11,7 +11,7 @@
     border-bottom: 1px solid #EEEEEE;
 }
 .company-name{
-    font-size: 34px;
+    font-size: 24px;
     font-weight: 600;
     line-height: 41.15px;
     color: #16263D;
@@ -34,7 +34,7 @@
 }
 
 .navbar-page{
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
     color: #16263D;
     cursor: pointer;
@@ -45,25 +45,14 @@
     gap: 10px;
 }
 
-.search-section{
-    display: flex;
-    gap: 10px;
-    padding: 20px 150px 20px 20px;
-    border-radius: 100px;
-    color: #707070;
-    border: 1px solid #CCCCCC;
-    align-content: center;    
-    font-size: 16px;
-    font-weight: 400;
-}
 
 .register-button{
-    padding: 20px 50px;
+    padding: 10px 50px;
     background-color: #16263D;
-    border-radius: 50px;
+    border-radius: 8px;
     color: white;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 500;
     line-height: 20px;
     cursor: pointer;
 }

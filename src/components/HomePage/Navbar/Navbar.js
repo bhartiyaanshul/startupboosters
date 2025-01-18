@@ -14,10 +14,6 @@ export const Navbar = () => {
                     <NavLink to='/raise-money' className='navbar-page'>Raise Money</NavLink>
                 </div>
                 <div className='navbar-buttons'>
-                    <div className='search-section'>
-                        <img src={searchicon} alt='' />
-                        <span>Search</span>
-                    </div>
                     <div className='register-button'>Register</div>
                 </div>
             </div>
