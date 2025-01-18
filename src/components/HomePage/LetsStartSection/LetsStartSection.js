@@ -14,9 +14,8 @@ export const LetsStartSection = () => {
                         <img src={searchicon} alt='' />
                         <div className='lets-start-input'>Enter Your Email</div>
                     </div>
-                    <div className='free-trial-button'>Free Trial</div>
+                    <div className='free-trial-button'>SignUp</div>
                 </div>
-
             </div>
         </div>
     )
