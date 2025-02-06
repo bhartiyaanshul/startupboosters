@@ -4,8 +4,8 @@ import { LoginPage } from './pages/LoginPage/LoginPage';
 import { SignupPage } from './pages/SignupPage/SignupPage';
 import HomePage from './pages/HomePage/HomePage';
 import RaiseMoneyPage from './pages/RaiseMoneyPage/RaiseMoneyPage';
-import { Navbar } from './components/HomePage/Navbar/Navbar';
-import { Footer } from './components/HomePage/Footer/Footer';
+import { Navbar } from './components/Navbar/Navbar';
+import { Footer } from './components/Footer/Footer';
 import ExplorePage from './pages/ExplorePage/ExplorePage';
 
 function App() {

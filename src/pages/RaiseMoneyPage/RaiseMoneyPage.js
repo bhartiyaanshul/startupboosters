@@ -3,7 +3,7 @@ import landingimage from './image.svg'
 import founderfriendly from './Images/Fundingeasy.svg'
 import buildbyfounders from './Images/builtbyfounders.svg'
 import './RaiseMoneyPage.css'
-import { LetsStartSection } from '../../components/HomePage/LetsStartSection/LetsStartSection'
+import { LetsStartSection } from '../../components/LetsStartSection/LetsStartSection'
 
 const RaiseMoneyPage = () => {
     return (
