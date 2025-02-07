@@ -9,10 +9,12 @@
 }
 
 .heading {
-    font-size: 34px;
+    font-size: 38px;
     font-weight: 600;
     line-height: 41.15px;
     color: #16263D;
+    text-transform: uppercase;
+    margin-bottom: 40px;
 }
 
 .categories {
@@ -28,10 +30,11 @@
 }
 
 .category-name{
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 29.16px;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 41.15px;
     color: #16263D;
+    text-transform: uppercase;
 }
 
 .startup-cards {
@@ -42,6 +45,7 @@
     align-items: center;
     overflow-x: auto;
     gap: 40px;
+    margin-bottom: 20px;
 }
 
 .startup-cards::-webkit-scrollbar {
@@ -67,6 +71,7 @@
     height: 400px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+    cursor: pointer;
 }
 
 .startup-details {
@@ -82,6 +87,10 @@
     font-weight: 600;
     line-height: 29.16px;
     letter-spacing: 0.6px;
+}
+
+.startup-image{
+    object-fit: contain;
 }
 
 .startup-description {

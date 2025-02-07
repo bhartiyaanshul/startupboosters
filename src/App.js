@@ -7,6 +7,7 @@ import RaiseMoneyPage from './pages/RaiseMoneyPage/RaiseMoneyPage';
 import { Navbar } from './components/Navbar/Navbar';
 import { Footer } from './components/Footer/Footer';
 import ExplorePage from './pages/ExplorePage/ExplorePage';
+import CompanyDetailsPage from './pages/CompanyDetailsPage/CompanyDetailsPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<HomePage />} />
         <Route path='/raise-money' element={<RaiseMoneyPage />} />
         <Route path='/explore' element={<ExplorePage />} />
+        <Route path='/company-details' element={<CompanyDetailsPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/signup' element={<SignupPage />} />
       </Routes>
