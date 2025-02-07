@@ -1,7 +1,7 @@
 import React from 'react'
 import './Explore.css'
 import investors from './Investor-explore.svg'
-import whyinvest from './why-invest.svg'
+import whyinvest from './why-invest.png'
 import newToInvesting from './new-to-investing.svg'
 
 
