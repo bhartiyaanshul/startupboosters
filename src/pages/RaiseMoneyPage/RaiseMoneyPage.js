@@ -37,7 +37,7 @@ export default function RaiseMoneyPage() {
                     className={`menu-container ${isMenuOpen ? "open" : ""}`}
                 >
                     <h2 className="menu-title">Let's gets community round started!</h2>
-                    <form className="form-container">
+                    <form className="raise-form-container">
                         <div className="form-group">
                             <label htmlFor="name">1. What's your company's name?</label>
                             <input id="name" type="text" placeholder="StartupBoosters" className="form-input" />

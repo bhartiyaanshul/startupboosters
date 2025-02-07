@@ -21,13 +21,7 @@ const CompanyDetailsPage = () => {
     <div className='comapany-details-page'>
       <div className='company-details-name'>Invest in {name}</div>
       <div className='company-desc'>{description}</div>
-      <div className='company-image-container'>
-        <img className='company-image' src={image} alt='' />
-        <div className='company-image-button'>
-          <div className='button'>Invest</div>
-        </div>
-      </div>
-
+      <img className='company-image' src={image} alt='' />
       <div className='company-details'>
         <div className='company-details-title'>Company overview</div>
         <div className='company-details-subtitle'>description</div>
