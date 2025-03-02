@@ -1,6 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 import searchicon from './Vector.png'
+// import profileicon from './profileicon.png' // Import the profile icon
 import { NavLink } from 'react-router-dom'
 
 export const Navbar = () => {
@@ -15,9 +16,11 @@ export const Navbar = () => {
                 </div>
                 <div className='navbar-buttons'>
                     <NavLink to='/auth' className='register-button'>Register</NavLink>
+                    <NavLink to='/profile' className='profile-icon'>
+                        <div className="profile-fallback">AS</div> {/* Fallback colored circle */}
+                    </NavLink>
                 </div>
             </div>
-
         </div>
     )
 }

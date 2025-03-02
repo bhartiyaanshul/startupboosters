@@ -1,15 +1,14 @@
-import { React, useState } from 'react'
-import './ExplorePage.css'
-import image from './images/company.svg'
+import { React, useState } from 'react';
+import './ExplorePage.css';
+import image from './images/company.svg';
 
 const ExplorePage = () => {
-
     const [tech, setTech] = useState([
         {
             name: "Nexora",
             description: "A cutting-edge AI platform that revolutionizes personalized learning for students and professionals.",
             longDesc: "Nexora uses advanced machine learning algorithms to create customized learning paths for individuals, helping them achieve their educational and career goals faster and more efficiently.",
-            image: "https://fakeimg.pl/720x720/?text=Nexora&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=Nexora&font=lobster&bg=E0BBE4",
             founders: ["Dr. Elena Martinez", "Rajiv Kapoor"],
             overview: "Founded in 2020, Nexora is headquartered in San Francisco, California. It has already partnered with over 50 universities and corporate training programs.",
             mission: "To democratize education through AI-driven personalized learning.",
@@ -31,7 +30,7 @@ const ExplorePage = () => {
             name: "QuantumLeap",
             description: "A quantum computing startup focused on solving complex problems in healthcare and logistics.",
             longDesc: "QuantumLeap develops quantum algorithms to optimize drug discovery, supply chain management, and financial modeling. Their proprietary quantum hardware is among the fastest in the world.",
-            image: "https://fakeimg.pl/720x720/?text=QuantumLeap&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=QuantumLeap&font=lobster&bg=FFDFD3",
             founders: ["Dr. Sophia Chen", "Michael O'Donnell"],
             overview: "Founded in 2021, QuantumLeap is based in Boston, Massachusetts. It has raised $50 million in Series A funding.",
             mission: "To harness the power of quantum computing for real-world applications.",
@@ -53,7 +52,7 @@ const ExplorePage = () => {
             name: "SkyForge",
             description: "A drone technology company specializing in autonomous delivery and aerial mapping.",
             longDesc: "SkyForge designs and manufactures drones for commercial and industrial use, including last-mile delivery, agricultural monitoring, and disaster relief operations.",
-            image: "https://fakeimg.pl/720x720/?text=SkyForge&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=SkyForge&font=lobster&bg=F1C0E8",
             founders: ["Alexei Volkov", "Priya Desai"],
             overview: "Founded in 2019, SkyForge is headquartered in Berlin, Germany. It has deployed drones in over 20 countries.",
             mission: "To make autonomous aerial technology accessible and impactful.",
@@ -75,7 +74,7 @@ const ExplorePage = () => {
             name: "NeuroSync",
             description: "A neurotechnology company developing brain-computer interfaces for medical and consumer applications.",
             longDesc: "NeuroSync creates wearable devices that allow users to control technology with their thoughts, enabling breakthroughs in healthcare, gaming, and accessibility.",
-            image: "https://fakeimg.pl/720x720/?text=NeuroSync&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=NeuroSync&font=lobster&bg=E2F0CB",
             founders: ["Dr. Emily Zhang", "Carlos Rivera"],
             overview: "Founded in 2018, NeuroSync is based in Austin, Texas. It has received FDA approval for its medical-grade brain-computer interface.",
             mission: "To bridge the gap between the human brain and technology.",
@@ -97,7 +96,7 @@ const ExplorePage = () => {
             name: "EcoGrid",
             description: "A smart energy company that optimizes power consumption for homes and businesses.",
             longDesc: "EcoGrid uses IoT and AI to create intelligent energy grids that reduce waste, lower costs, and promote sustainability.",
-            image: "https://fakeimg.pl/720x720/?text=EcoGrid&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=EcoGrid&font=lobster&bg=FFB6B9",
             founders: ["Sarah Thompson", "James Lee"],
             overview: "Founded in 2020, EcoGrid is headquartered in Seattle, Washington. It has partnered with major utility companies across the U.S.",
             mission: "To create a sustainable future through smart energy solutions.",
@@ -119,7 +118,7 @@ const ExplorePage = () => {
             name: "VirtuCraft",
             description: "A virtual reality (VR) company focused on immersive training and education.",
             longDesc: "VirtuCraft creates VR simulations for industries like healthcare, manufacturing, and education, providing realistic and interactive training experiences.",
-            image: "https://fakeimg.pl/720x720/?text=VirtuCraft&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=VirtuCraft&font=lobster&bg=FFDAC1",
             founders: ["Daniel Kim", "Laura Bennett"],
             overview: "Founded in 2017, VirtuCraft is based in London, UK. It has developed over 100 VR training modules for global clients.",
             mission: "To revolutionize training and education through immersive VR experiences.",
@@ -141,7 +140,7 @@ const ExplorePage = () => {
             name: "BioNest",
             description: "A biotech company specializing in synthetic biology and bioengineered materials.",
             longDesc: "BioNest develops sustainable materials and products using synthetic biology, including biodegradable plastics, lab-grown leather, and bio-based textiles.",
-            image: "https://fakeimg.pl/720x720/?text=BioNest&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=BioNest&font=lobster&bg=E2F0CB",
             founders: ["Dr. Anika Patel", "Ethan Clarke"],
             overview: "Founded in 2019, BioNest is headquartered in Singapore. It has partnered with major fashion and manufacturing brands.",
             mission: "To create a sustainable future through bioengineered materials.",
@@ -163,7 +162,7 @@ const ExplorePage = () => {
             name: "CodeCrafters",
             description: "A no-code platform that enables anyone to build apps without programming knowledge.",
             longDesc: "CodeCrafters provides a drag-and-drop interface for creating web and mobile apps, making app development accessible to non-technical users.",
-            image: "https://fakeimg.pl/720x720/?text=CodeCrafters&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=CodeCrafters&font=lobster&bg=FFDFD3",
             founders: ["Maya Rodriguez", "Chris Evans"],
             overview: "Founded in 2021, CodeCrafters is based in Toronto, Canada. It has over 100,000 users worldwide.",
             mission: "To democratize app development through no-code technology.",
@@ -185,7 +184,7 @@ const ExplorePage = () => {
             name: "Solaris Robotics",
             description: "A robotics company focused on solar-powered autonomous robots for agriculture and construction.",
             longDesc: "Solaris Robotics designs robots that operate on solar energy, performing tasks like planting, harvesting, and construction with minimal human intervention.",
-            image: "https://fakeimg.pl/720x720/?text=SolarisRobotics&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=SolarisRobotics&font=lobster&bg=F1C0E8",
             founders: ["Dr. Hiroshi Tanaka", "Maria Gonzalez"],
             overview: "Founded in 2020, Solaris Robotics is headquartered in Tokyo, Japan. It has deployed robots in over 15 countries.",
             mission: "To revolutionize industries with solar-powered robotics.",
@@ -207,7 +206,7 @@ const ExplorePage = () => {
             name: "HealthSync",
             description: "A health tech company that integrates wearable devices with personalized healthcare solutions.",
             longDesc: "HealthSync connects wearable devices like smartwatches and fitness trackers with healthcare providers, enabling real-time monitoring and personalized treatment plans.",
-            image: "https://fakeimg.pl/720x720/?text=HealthSync&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=HealthSync&font=lobster&bg=FFB6B9",
             founders: ["Dr. Olivia Carter", "Ryan Park"],
             overview: "Founded in 2018, HealthSync is based in Chicago, Illinois. It has partnered with major hospitals and insurance providers.",
             mission: "To bridge the gap between wearable technology and healthcare.",
@@ -232,7 +231,7 @@ const ExplorePage = () => {
             name: "GreenBite",
             description: "A plant-based meal delivery service offering chef-curated, sustainable meals.",
             longDesc: "GreenBite delivers ready-to-eat, plant-based meals made from locally sourced, organic ingredients. Their mission is to make sustainable eating convenient and delicious.",
-            image: "https://fakeimg.pl/720x720/?text=GreenBite&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=GreenBite&font=lobster&bg=FFDAC1",
             founders: ["Emma Carter", "Liam Nguyen"],
             overview: "Founded in 2020, GreenBite is headquartered in Portland, Oregon. It has expanded to over 20 cities across the U.S.",
             mission: "To make plant-based eating accessible, affordable, and enjoyable.",
@@ -254,7 +253,7 @@ const ExplorePage = () => {
             name: "UrbanHarvest",
             description: "A vertical farming company that grows fresh produce in urban environments.",
             longDesc: "UrbanHarvest uses hydroponic and aeroponic systems to grow fruits and vegetables in urban areas, reducing the need for long-distance transportation and ensuring fresh, local produce year-round.",
-            image: "https://fakeimg.pl/720x720/?text=UrbanHarvest&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=UrbanHarvest&font=lobster&bg=E2F0CB",
             founders: ["Sophia Martinez", "David Kim"],
             overview: "Founded in 2019, UrbanHarvest operates farms in New York, Chicago, and Los Angeles. It supplies produce to local restaurants and grocery stores.",
             mission: "To bring fresh, sustainable produce to urban communities.",
@@ -276,7 +275,7 @@ const ExplorePage = () => {
             name: "FlavorFusion",
             description: "A food tech company creating personalized spice blends using AI.",
             longDesc: "FlavorFusion uses artificial intelligence to analyze individual taste preferences and create custom spice blends tailored to each customer's palate.",
-            image: "https://fakeimg.pl/720x720/?text=FlavorFusion&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=FlavorFusion&font=lobster&bg=FFDFD3",
             founders: ["Aisha Patel", "Michael Brown"],
             overview: "Founded in 2021, FlavorFusion is based in San Francisco, California. It has shipped over 100,000 custom spice blends worldwide.",
             mission: "To revolutionize home cooking with personalized flavors.",
@@ -298,7 +297,7 @@ const ExplorePage = () => {
             name: "OceanBites",
             description: "A sustainable seafood company offering plant-based alternatives to seafood.",
             longDesc: "OceanBites creates plant-based seafood products that mimic the taste and texture of real seafood, helping to reduce overfishing and promote ocean conservation.",
-            image: "https://fakeimg.pl/720x720/?text=OceanBites&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=OceanBites&font=lobster&bg=FFB6B9",
             founders: ["Carlos Rivera", "Priya Desai"],
             overview: "Founded in 2020, OceanBites is headquartered in Miami, Florida. Its products are available in over 1,000 grocery stores nationwide.",
             mission: "To protect our oceans by offering delicious, sustainable seafood alternatives.",
@@ -320,7 +319,7 @@ const ExplorePage = () => {
             name: "SweetRoots",
             description: "A farm-to-table bakery specializing in organic, gluten-free desserts.",
             longDesc: "SweetRoots uses locally sourced, organic ingredients to create gluten-free and allergen-friendly desserts. Their products are sold online and in select cafes.",
-            image: "https://fakeimg.pl/720x720/?text=SweetRoots&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=SweetRoots&font=lobster&bg=FFDAC1",
             founders: ["Hannah Lee", "Ethan Carter"],
             overview: "Founded in 2018, SweetRoots is based in Austin, Texas. It has gained a loyal following for its innovative and healthy desserts.",
             mission: "To make indulgent desserts that are both delicious and nutritious.",
@@ -342,7 +341,7 @@ const ExplorePage = () => {
             name: "FarmToFork",
             description: "A subscription service delivering fresh, seasonal produce directly from local farms.",
             longDesc: "FarmToFork connects consumers with local farmers, delivering fresh, seasonal produce straight to their doors. Each box includes recipes and tips for using the ingredients.",
-            image: "https://fakeimg.pl/720x720/?text=FarmToFork&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=FarmToFork&font=lobster&bg=E2F0CB",
             founders: ["Olivia Green", "James Wilson"],
             overview: "Founded in 2019, FarmToFork operates in the Pacific Northwest and has partnered with over 50 local farms.",
             mission: "To support local farmers and provide fresh, seasonal produce to consumers.",
@@ -364,7 +363,7 @@ const ExplorePage = () => {
             name: "BrewCraft",
             description: "A craft brewery specializing in small-batch, experimental beers.",
             longDesc: "BrewCraft creates unique, small-batch beers using locally sourced ingredients and innovative brewing techniques. Their taproom offers a rotating selection of experimental brews.",
-            image: "https://fakeimg.pl/720x720/?text=BrewCraft&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=BrewCraft&font=lobster&bg=FFDFD3",
             founders: ["Jake Thompson", "Mia Rodriguez"],
             overview: "Founded in 2017, BrewCraft is based in Denver, Colorado. It has won multiple awards for its innovative beers.",
             mission: "To push the boundaries of craft brewing.",
@@ -945,7 +944,7 @@ const ExplorePage = () => {
             name: "HealthSync",
             description: "A health tech company that integrates wearable devices with personalized healthcare solutions.",
             longDesc: "HealthSync connects wearable devices like smartwatches and fitness trackers with healthcare providers, enabling real-time monitoring and personalized treatment plans.",
-            image: "https://fakeimg.pl/720x720/?text=HealthSync&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=HealthSync&font=lobster&bg=FFB6B9",
             founders: ["Dr. Olivia Carter", "Ryan Park"],
             overview: "Founded in 2018, HealthSync is based in Chicago, Illinois. It has partnered with major hospitals and insurance providers.",
             mission: "To bridge the gap between wearable technology and healthcare.",
@@ -1077,7 +1076,7 @@ const ExplorePage = () => {
             name: "BioNest",
             description: "A biotech company specializing in synthetic biology and bioengineered materials.",
             longDesc: "BioNest develops sustainable materials and products using synthetic biology, including biodegradable plastics, lab-grown leather, and bio-based textiles.",
-            image: "https://fakeimg.pl/720x720/?text=BioNest&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=BioNest&font=lobster&bg=E2F0CB",
             founders: ["Dr. Anika Patel", "Ethan Clarke"],
             overview: "Founded in 2019, BioNest is headquartered in Singapore. It has partnered with major fashion and manufacturing brands.",
             mission: "To create a sustainable future through bioengineered materials.",
@@ -1099,7 +1098,7 @@ const ExplorePage = () => {
             name: "NeuroSync",
             description: "A neurotechnology company developing brain-computer interfaces for medical and consumer applications.",
             longDesc: "NeuroSync creates wearable devices that allow users to control technology with their thoughts, enabling breakthroughs in healthcare, gaming, and accessibility.",
-            image: "https://fakeimg.pl/720x720/?text=NeuroSync&font=lobster",
+            image: "https://fakeimg.pl/720x720/?text=NeuroSync&font=lobster&bg=E2F0CB",
             founders: ["Dr. Emily Zhang", "Carlos Rivera"],
             overview: "Founded in 2018, NeuroSync is based in Austin, Texas. It has received FDA approval for its medical-grade brain-computer interface.",
             mission: "To bridge the gap between the human brain and technology.",
@@ -1140,41 +1139,37 @@ const ExplorePage = () => {
             name: 'B2C',
             startups: b2c,
         },
-    ]
+    ];
+
     return (
         <div className='explore-page'>
             <div className='heading'>Invest in founders building the future</div>
             <div className='categories'>
-                {categories.map((category, index) => {
-                    return (
-                        <div className='category' key={index}>
-                            <div className='category-name'>{category.name}</div>
-                            <div className='startup-cards'>
-                                {category.startups.map((startup, index) => {
-                                    return (
-                                        <div
-                                            className='startup-card'
-                                            key={index}
-                                            onClick={() => {
-                                                window.location.href = `/company-details?name=${encodeURIComponent(startup.name)}&description=${encodeURIComponent(startup.description)}&longDesc=${encodeURIComponent(startup.longDesc)}&image=${encodeURIComponent(startup.image)}&founders=${encodeURIComponent(startup.founders.join(','))}&overview=${encodeURIComponent(startup.overview)}&mission=${encodeURIComponent(startup.mission)}&vision=${encodeURIComponent(startup.vision)}&services=${encodeURIComponent(startup.services.join(','))}&features=${encodeURIComponent(startup.features.join(','))}`;
-                                            }}
-                                        >
-                                            {console.log(startup.image)}
-                                            <img src={startup.image} alt='' className='startup-image'/>
-                                            <div className='startup-details'>
-                                                <div className='startup-name'>{startup.name}</div>
-                                                <div className='startup-description'>{startup.description}</div>
-                                            </div>
-                                        </div>
-                                    )
-                                })}
-                            </div>
+                {categories.map((category, index) => (
+                    <div className='category' key={index}>
+                        <div className='category-name'>{category.name}</div>
+                        <div className='startup-cards'>
+                            {category.startups.map((startup, index) => (
+                                <div
+                                    className='startup-card'
+                                    key={index}
+                                    onClick={() => {
+                                        window.location.href = `/company-details?name=${encodeURIComponent(startup.name)}&description=${encodeURIComponent(startup.description)}&longDesc=${encodeURIComponent(startup.longDesc)}&image=${encodeURIComponent(startup.image)}&founders=${encodeURIComponent(startup.founders.join(','))}&overview=${encodeURIComponent(startup.overview)}&mission=${encodeURIComponent(startup.mission)}&vision=${encodeURIComponent(startup.vision)}&services=${encodeURIComponent(startup.services.join(','))}&features=${encodeURIComponent(startup.features.join(','))}`;
+                                    }}
+                                >
+                                    <img src={startup.image} alt='' className='startup-image' />
+                                    <div className='startup-details'>
+                                        <div className='startup-name'>{startup.name}</div>
+                                        <div className='startup-description'>{startup.description}</div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    )
-                })}
+                    </div>
+                ))}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default ExplorePage
+export default ExplorePage;

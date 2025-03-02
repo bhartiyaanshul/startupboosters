@@ -1,4 +1,4 @@
-.Navbar{
+.Navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,7 +12,8 @@
     justify-content: space-between;
     border-bottom: 1px solid #EEEEEE;
 }
-.company-name{
+
+.company-name {
     font-size: 24px;
     font-weight: 600;
     line-height: 41.15px;
@@ -21,13 +22,13 @@
     text-align: center;
 }
 
-.navbar-content{
+.navbar-content {
     display: flex;
     /* justify-content: space-between; */
     gap: 100px;
 }
 
-.navbar-pages{
+.navbar-pages {
     color: #16263D;
     display: flex;
     gap: 40px;
@@ -35,20 +36,22 @@
     justify-content: center;
 }
 
-.navbar-page{
+.navbar-page {
     font-size: 18px;
     line-height: 24px;
     color: #16263D;
     cursor: pointer;
     text-decoration: none;
 }
-.navbar-buttons{
+
+.navbar-buttons {
     display: flex;
     gap: 10px;
+    align-items: center;
+    /* Ensure alignment */
 }
 
-
-.register-button{
+.register-button {
     padding: 10px 50px;
     background-color: #16263D;
     border-radius: 8px;
@@ -57,4 +60,44 @@
     font-weight: 500;
     line-height: 20px;
     cursor: pointer;
+}
+
+.profile-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-icon img {
+    width: 40px;
+    /* Adjust size as needed */
+    height: 40px;
+    /* Adjust size as needed */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile-fallback {
+    display: none;
+    /* Initially hidden */
+    width: 40px;
+    /* Adjust size as needed */
+    height: 40px;
+    /* Adjust size as needed */
+    border-radius: 50%;
+    background-color: #16263D;
+    /* Fallback color */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.profile-icon img[style*="display: none"]+.profile-fallback {
+    display: flex;
+    /* Show fallback when image is not available */
 }

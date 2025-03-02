@@ -1,50 +1,70 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import './AuthenticationPage.css'
+import supabase from '../../supabaseClient'
 
 const AuthenticationPage = () => {
-
-    const [isLogin, setIsLogin] = useState(true);
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [errors, setErrors] = useState({});
+    const [isLogin, setIsLogin] = useState(true)
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
+    const [errors, setErrors] = useState({})
+    const [message, setMessage] = useState('')
 
     const validateEmail = (email) => {
-        return /\S+@\S+\.\S+/.test(email);
-    };
+        return /\S+@\S+\.\S+/.test(email)
+    }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        let validationErrors = {};
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        let validationErrors = {}
 
         if (!validateEmail(email)) {
-            validationErrors.email = "Invalid email format.";
+            validationErrors.email = 'Invalid email format.'
         }
         if (password.length < 6) {
-            validationErrors.password = "Password must be at least 6 characters long.";
+            validationErrors.password = 'Password must be at least 6 characters long.'
         }
         if (!isLogin && password !== confirmPassword) {
-            validationErrors.confirmPassword = "Passwords do not match.";
+            validationErrors.confirmPassword = 'Passwords do not match.'
         }
 
         if (Object.keys(validationErrors).length > 0) {
-            setErrors(validationErrors);
-            return;
+            setErrors(validationErrors)
+            return
         }
 
-        alert(isLogin ? "Logged in successfully!" : "Account created successfully!");
-        setEmail('');
-        setPassword('');
-        setConfirmPassword('');
-        setErrors({});
-    };
+        if (isLogin) {
+            const { error } = await supabase.auth.signInWithPassword({ email, password })
+            if (error) {
+                setErrors({ auth: error.message })
+            } else {
+                setMessage('Logged in successfully!')
+            }
+        } else {
+            const { error } = await supabase.auth.signUp({ email, password })
+            if (error) {
+                setErrors({ auth: error.message })
+            } else {
+                setMessage('Account created successfully!')
+            }
+        }
+
+        setEmail('')
+        setPassword('')
+        setConfirmPassword('')
+        setErrors({})
+    }
+
     return (
         <div className="container">
             <div className="form-container">
                 <div className="form-toggle">
-                    <button className={isLogin ? 'active' : ''} onClick={() => setIsLogin(true)}>Log in</button>
-                    <button className={!isLogin ? 'active' : ''} onClick={() => setIsLogin(false)}>Sign up</button>
+                    <button className={isLogin ? 'active' : ''} onClick={() => setIsLogin(true)}>
+                        Log in
+                    </button>
+                    <button className={!isLogin ? 'active' : ''} onClick={() => setIsLogin(false)}>
+                        Sign up
+                    </button>
                 </div>
 
                 <form onSubmit={handleSubmit} className="form">
@@ -80,8 +100,11 @@ const AuthenticationPage = () => {
 
                     <button type="submit">{isLogin ? 'Login' : 'Sign Up'}</button>
 
+                    {errors.auth && <span className="error">{errors.auth}</span>}
+                    {message && <span className="message">{message}</span>}
+
                     <p>
-                        {isLogin ? "Don't have an account?" : "Already have an account?"}
+                        {isLogin ? "Don't have an account?" : 'Already have an account?'}
                         <span onClick={() => setIsLogin(!isLogin)} style={{ cursor: 'pointer', color: 'blue' }}>
                             {isLogin ? ' Signup' : ' Login'}
                         </span>

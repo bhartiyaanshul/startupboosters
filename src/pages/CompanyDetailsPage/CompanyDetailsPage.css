@@ -1,67 +1,131 @@
-.comapany-details-page{
+.company-details-page {
     display: flex;
     flex-direction: column;
     text-align: left;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 60px 160px;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 20px;
     margin-top: 100px;
-
 }
 
-.company-details-name{
-    font-size: 34px;
-    font-weight: 500;
-    line-height: 41.15px;
+.company-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.company-details-name {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
     color: #16263D;
     text-transform: uppercase;
 }
 
-.company-desc{
-    font-size: 28px;
+.company-desc {
+    font-size: 24px;
     font-weight: 300;
-    line-height: 24px;
+    line-height: 1.5;
     color: #414345;
-    margin-bottom: 30px;
+    margin-top: 10px;
 }
 
-.company-image{
+.company-image {
     width: 100%;
-    height: 700px;
+    max-width: 1200px;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 40px;
 }
 
-.company-details{
+.company-details {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    justify-content: space-between;
-    width: 65%;
+    gap: 40px;
+    width: 100%;
+    max-width: 800px;
 }
 
-.company-details-title{
-    font-size: 34px;
+.company-details-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.company-details-title {
+    font-size: 28px;
     font-weight: 600;
-    line-height: 29.16px;
+    line-height: 1.2;
     color: #16263D;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-.company-details-subtitle{
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 29.16px;
+.company-details-subtitle {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2;
     color: #414345;
     text-transform: uppercase;
 }
 
-.company-long-desc{
-    font-size: 20px;
+.company-details-content {
+    font-size: 18px;
     font-weight: 300;
-    line-height: 29.16px;
+    line-height: 1.5;
     color: #414345;
 }
 
+.checkout-box {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.checkout-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.checkout-users {
+    font-size: 20px;
+    font-weight: 500;
+    color: #16263D;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #16263D;
+    transition: width 0.3s;
+}
+
+.checkout-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #16263D;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-button:hover {
+    background-color: #0f1a2b;
+}

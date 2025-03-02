@@ -1,0 +1,74 @@
+.admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin-top: 70px;
+}
+
+.admin-section {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.admin-section h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.admin-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.admin-section ul li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.section ul li h4 {
+    margin: 0 0 5px;
+    color: #555;
+}
+
+.section ul li p {
+    margin: 0;
+    color: #777;
+}
+
+.section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.section form textarea,
+.section form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.section form button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.section form button:hover {
+    background-color: #0056b3;
+}
