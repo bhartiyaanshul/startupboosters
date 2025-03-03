@@ -7,7 +7,11 @@ const UserProfile = () => {
     const [investedCompanies, setInvestedCompanies] = useState([])
     const [createdCompanies, setCreatedCompanies] = useState([])
     const [selectedCompany, setSelectedCompany] = useState(null)
+    const [isPopupOpen, setIsPopupOpen] = useState(false)
+    const [isEditing, setIsEditing] = useState(false)
+    const [isEditingProfile, setIsEditingProfile] = useState(false)
     const [loading, setLoading] = useState(true)
+    const [showSnackbar, setShowSnackbar] = useState(false)
 
     useEffect(() => {
         const fetchUserData = async () => {
@@ -72,6 +76,63 @@ const UserProfile = () => {
 
     const handleCompanyClick = (company) => {
         setSelectedCompany(company)
+        setIsPopupOpen(true)
+    }
+
+    const handleEditClick = () => {
+        setIsEditing(true)
+    }
+
+    const handleSaveClick = () => {
+        setIsEditing(false)
+        // Save the edited company details
+        setShowSnackbar(true)
+        setTimeout(() => setShowSnackbar(false), 3000)
+    }
+
+    const handleClosePopup = () => {
+        setIsPopupOpen(false)
+        setIsEditing(false)
+    }
+
+    const handleInputChange = (e, field) => {
+        setSelectedCompany({
+            ...selectedCompany,
+            companies: {
+                ...selectedCompany.companies,
+                [field]: e.target.value
+            }
+        })
+    }
+
+    const handleProfileEditClick = () => {
+        setIsEditingProfile(true)
+    }
+
+    const handleProfileSaveClick = () => {
+        setIsEditingProfile(false)
+        // Save the edited profile details
+        setShowSnackbar(true)
+        setTimeout(() => setShowSnackbar(false), 3000)
+    }
+
+    const handleProfileInputChange = (e, field) => {
+        setUser({
+            ...user,
+            [field]: e.target.value
+        })
+    }
+
+    const handleProfilePictureChange = (e) => {
+        const file = e.target.files[0]
+        const reader = new FileReader()
+        reader.onloadend = () => {
+            setUser({
+                ...user,
+                profile_picture: reader.result
+            })
+        }
+        reader.readAsDataURL(file)
     }
 
     if (loading) {
@@ -90,8 +151,21 @@ const UserProfile = () => {
                                 backgroundColor: user.profile_picture ? 'transparent' : '#16263D',
                             }}
                         ></div>
-                        <h2>{user.name}</h2>
-                        <p>{user.email}</p>
+                        {isEditingProfile ? (
+                            <div className="edit-profile-form">
+                                <label>Profile Picture</label>
+                                <input type="file" onChange={handleProfilePictureChange} />
+                                <label>Name</label>
+                                <input type="text" value={user.name} onChange={(e) => handleProfileInputChange(e, 'name')} />
+                                <button onClick={handleProfileSaveClick}>Save</button>
+                            </div>
+                        ) : (
+                            <>
+                                <h2>{user.name}</h2>
+                                <p>{user.email}</p>
+                                <button className='button-profile' onClick={handleProfileEditClick} >Edit Profile</button>
+                            </>
+                        )}
                     </>
                 )}
             </div>
@@ -108,21 +182,6 @@ const UserProfile = () => {
                         ))}
                     </ul>
                 </div>
-                {selectedCompany && selectedCompany.companies && (
-                    <div className="section">
-                        <h1>Selected Company Details</h1>
-                        <h3>{selectedCompany.companies.name}</h3>
-                        <p>{selectedCompany.companies.description}</p>
-                        <p>{selectedCompany.companies.longDesc}</p>
-                        <p><strong>Founders:</strong> {selectedCompany.companies.founders.join(', ')}</p>
-                        <p><strong>Overview:</strong> {selectedCompany.companies.overview}</p>
-                        <p><strong>Mission:</strong> {selectedCompany.companies.mission}</p>
-                        <p><strong>Vision:</strong> {selectedCompany.companies.vision}</p>
-                        <p><strong>Services:</strong> {selectedCompany.companies.services.join(', ')}</p>
-                        <p><strong>Features:</strong> {selectedCompany.companies.features.join(', ')}</p>
-                        <p><strong>Amount Invested:</strong> ${selectedCompany.amount}</p>
-                    </div>
-                )}
                 <div className="section">
                     <h3>Created Companies</h3>
                     <ul>
@@ -134,8 +193,63 @@ const UserProfile = () => {
                         ))}
                     </ul>
                 </div>
-
             </div>
+            {isPopupOpen && selectedCompany && (
+                <div className="popup">
+                    <div className="popup-content">
+                        <button className="close-button" onClick={handleClosePopup}>X</button>
+                        {isEditing ? (
+                            <div className="edit-form">
+                                <h1>Edit Company Details</h1>
+                                <label>Name</label>
+                                <input type="text" value={selectedCompany.companies?.name || selectedCompany.name} onChange={(e) => handleInputChange(e, 'name')} />
+                                <label>Description</label>
+                                <textarea value={selectedCompany.companies?.description || selectedCompany.description} onChange={(e) => handleInputChange(e, 'description')}></textarea>
+                                <label>Long Description</label>
+                                <textarea value={selectedCompany.companies?.longDesc || selectedCompany.longDesc} onChange={(e) => handleInputChange(e, 'longDesc')}></textarea>
+                                <label>Image URL</label>
+                                <input type="text" value={selectedCompany.companies?.image || selectedCompany.image} onChange={(e) => handleInputChange(e, 'image')} />
+                                <label>Founders</label>
+                                <input type="text" value={selectedCompany.companies?.founders?.join(', ') || selectedCompany.founders?.join(', ')} onChange={(e) => handleInputChange(e, 'founders')} />
+                                <label>Overview</label>
+                                <textarea value={selectedCompany.companies?.overview || selectedCompany.overview} onChange={(e) => handleInputChange(e, 'overview')}></textarea>
+                                <label>Mission</label>
+                                <textarea value={selectedCompany.companies?.mission || selectedCompany.mission} onChange={(e) => handleInputChange(e, 'mission')}></textarea>
+                                <label>Vision</label>
+                                <textarea value={selectedCompany.companies?.vision || selectedCompany.vision} onChange={(e) => handleInputChange(e, 'vision')}></textarea>
+                                <label>Services</label>
+                                <input type="text" value={selectedCompany.companies?.services?.join(', ') || selectedCompany.services?.join(', ')} onChange={(e) => handleInputChange(e, 'services')} />
+                                <label>Features</label>
+                                <input type="text" value={selectedCompany.companies?.features?.join(', ') || selectedCompany.features?.join(', ')} onChange={(e) => handleInputChange(e, 'features')} />
+                                <button onClick={handleSaveClick}>Save</button>
+                            </div>
+                        ) : (
+                            <div>
+                                <h1>Company Details</h1>
+                                <h3>{selectedCompany.companies?.name || selectedCompany.name}</h3>
+                                <p>{selectedCompany.companies?.description || selectedCompany.description}</p>
+                                <p>{selectedCompany.companies?.longDesc || selectedCompany.longDesc}</p>
+                                <p><strong>Founders:</strong> {selectedCompany.companies?.founders?.join(', ') || selectedCompany.founders?.join(', ')}</p>
+                                <p><strong>Overview:</strong> {selectedCompany.companies?.overview || selectedCompany.overview}</p>
+                                <p><strong>Mission:</strong> {selectedCompany.companies?.mission || selectedCompany.mission}</p>
+                                <p><strong>Vision:</strong> {selectedCompany.companies?.vision || selectedCompany.vision}</p>
+                                <p><strong>Services:</strong> {selectedCompany.companies?.services?.join(', ') || selectedCompany.services?.join(', ')}</p>
+                                <p><strong>Features:</strong> {selectedCompany.companies?.features?.join(', ') || selectedCompany.features?.join(', ')}</p>
+                                {createdCompanies.some(company => company.id === selectedCompany.id) ? (
+                                    <button onClick={handleEditClick}>Edit</button>
+                                ) : (
+                                    <p><strong>Amount Invested:</strong> ${selectedCompany.amount}</p>
+                                )}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )}
+            {showSnackbar && (
+                <div className="snackbar">
+                    <p>Profile updated successfully!</p>
+                </div>
+            )}
         </div>
     )
 }
