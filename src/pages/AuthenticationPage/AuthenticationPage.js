@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './AuthenticationPage.css'
-import supabase from '../../supabaseClient'
 
 const AuthenticationPage = () => {
     const [isLogin, setIsLogin] = useState(true)
@@ -9,12 +9,13 @@ const AuthenticationPage = () => {
     const [confirmPassword, setConfirmPassword] = useState('')
     const [errors, setErrors] = useState({})
     const [message, setMessage] = useState('')
+    const navigate = useNavigate()
 
     const validateEmail = (email) => {
         return /\S+@\S+\.\S+/.test(email)
     }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault()
         let validationErrors = {}
 
@@ -34,19 +35,17 @@ const AuthenticationPage = () => {
         }
 
         if (isLogin) {
-            const { error } = await supabase.auth.signInWithPassword({ email, password })
-            if (error) {
-                setErrors({ auth: error.message })
-            } else {
-                setMessage('Logged in successfully!')
-            }
+            // Simulate successful login
+            setMessage('Logged in successfully!')
+            setTimeout(() => {
+                navigate('/')
+            }, 1000)
         } else {
-            const { error } = await supabase.auth.signUp({ email, password })
-            if (error) {
-                setErrors({ auth: error.message })
-            } else {
-                setMessage('Account created successfully!')
-            }
+            // Simulate successful signup
+            setMessage('Account created successfully!')
+            setTimeout(() => {
+                navigate('/')
+            }, 1000)
         }
 
         setEmail('')
