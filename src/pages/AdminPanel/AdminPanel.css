@@ -1,48 +1,83 @@
 .admin-dashboard {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #f5f5f5;
-    margin-top: 70px;
+    margin-top: 80px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
 }
 
-.admin-section {
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 20px;
+.sidebar {
+    width: 300px;
+    background: #ffffff;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #e0e0e0;
     border-radius: 8px;
 }
 
-.admin-section h3 {
-    margin-bottom: 10px;
-    color: #333;
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
 }
 
-.admin-section ul {
+.sidebar ul li {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.sidebar ul li.active {
+    background-color: #16263D;
+    color: #fff;
+}
+
+.main-content {
+    flex: 1;
+    padding: 0px 20px;
+    height: 100vh;
+}
+
+.section {
+    margin-bottom: 30px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.5em;
+}
+
+.section ul {
     list-style-type: none;
     padding: 0;
 }
 
-.admin-section ul li {
+.section ul li {
+    background: #f0f0f0;
+    padding: 15px;
     margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-.section ul li h4 {
-    margin: 0 0 5px;
-    color: #555;
-}
-
-.section ul li p {
-    margin: 0;
-    color: #777;
+.section ul li:hover {
+    background: #e0e0e0;
 }
 
 .section form {
@@ -53,8 +88,8 @@
 .section form textarea,
 .section form input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
 }
@@ -70,5 +105,49 @@
 }
 
 .section form button:hover {
+    background-color: #0056b3;
+}
+
+.user-details,
+.company-details {
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.add-funds {
+    margin-top: 20px;
+}
+
+.add-funds h4 {
+    margin-bottom: 10px;
+}
+
+.add-funds form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-funds form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.add-funds form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-funds form button:hover {
     background-color: #0056b3;
 }

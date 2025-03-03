@@ -14,6 +14,7 @@ import AdminPanel from './pages/AdminPanel/AdminPanel'; // Import AdminPanel
 function App() {
   const location = useLocation();
   const hideNavbarFooter = location.pathname === '/auth' || location.pathname === '/checkout';
+  const hideFooter = location.pathname === '/admin' || location.pathname === '/profile';
 
   return (
     <div>
@@ -28,7 +29,7 @@ function App() {
         <Route path='/profile' element={<UserProfile />} /> {/* Add UserProfile route */}
         <Route path='/admin' element={<AdminPanel />} /> {/* Add AdminPanel route */}
       </Routes>
-      {!hideNavbarFooter && <Footer />}
+      {!hideNavbarFooter && !hideFooter && <Footer />}
     </div>
   );
 }
